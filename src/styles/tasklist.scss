@@ -169,4 +169,10 @@ section.task-list {
       }
     } 
   }
+
+  @media (max-width: 768px) {
+    & {
+      padding: 50px 32px;
+    }
+  }
 }
