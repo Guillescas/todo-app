@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import '../styles/tasklist.scss'
 
@@ -15,6 +15,16 @@ export function TaskList() {
   const [newTaskTitle, setNewTaskTitle] = useState('');
 
   const [id, setId] = useState(0);
+
+  useEffect(() => {
+    const tasks = localStorage.getItem('tasks');
+
+    if (!tasks) {
+      return
+    }
+
+    setTasks(JSON.parse(tasks));
+  }, []);
 
   function handleCreateNewTask() {
     setId(id + 1);
@@ -39,7 +49,7 @@ export function TaskList() {
         task.id === id && task.isComplete === false
           ? { ...task, isComplete: true }
           : task.id === id && task.isComplete === true ? { ...task, isComplete: false }
-          : task
+            : task
       ))
   }
 
@@ -48,6 +58,12 @@ export function TaskList() {
       return task.id !== id;
     }));
   }
+
+  useEffect(() => {
+    localStorage.removeItem('tasks');
+
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks])
 
   return (
     <section className="task-list container">
@@ -61,7 +77,12 @@ export function TaskList() {
             onChange={(e) => setNewTaskTitle(e.target.value)}
             value={newTaskTitle}
           />
-          <button type="submit" data-testid="add-task-button" onClick={handleCreateNewTask}>
+          <button 
+            type="submit" 
+            data-testid="add-task-button" 
+            onClick={handleCreateNewTask} 
+            onKeyDown={handleCreateNewTask}
+          >
             <FiCheckSquare size={16} color="#fff" />
           </button>
         </div>
