@@ -60,6 +60,16 @@ section.task-list {
         }
       }
     }
+
+    @media (max-width: 768px) {
+      & {
+        flex-direction: column;
+
+        .input-group {
+          margin-top: 16px;
+        }
+      }
+    }
   }
 
   main {
