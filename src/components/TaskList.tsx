@@ -24,6 +24,8 @@ export function TaskList() {
     }
 
     setTasks(JSON.parse(tasks));
+    
+    setId(JSON.parse(tasks).length);
   }, []);
 
   function handleCreateNewTask() {
