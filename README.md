@@ -28,7 +28,7 @@ A simple app to you organize your objectives and check when you can done one or 
 - [Typescript](https://www.typescriptlang.org/)
 - [WebPack](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
-- React Hooks: useState and useEffect
+- [React Hooks: useState and useEffect](https://pt-br.reactjs.org/docs/hooks-intro.html)
 
 <h2 id="features">🚀 Features</h2>
 
