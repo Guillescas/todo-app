@@ -74,8 +74,8 @@ export function TaskList() {
           <input
             type="text"
             placeholder="Adicionar novo todo"
-            onChange={(e) => setNewTaskTitle(e.target.value)}
             value={newTaskTitle}
+            onChange={(e) => setNewTaskTitle(e.target.value)}
             onKeyDown={e => {
               if (e.keyCode === 13) {
                 handleCreateNewTask();
