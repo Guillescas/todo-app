@@ -2,7 +2,7 @@
   <img alt="logo moveit"  src="./public/logo-dark.svg">
 </div>
 
-<p align="center"> This is an app that you can control your activities. Add or remove items, and check those are completed. </p>
+<p align="center"> This is an app in which you can control your activities. Add or remove items, and check when you've done a task. </p>
 
 <p align="center">
  <a href="#objective">Objective</a> •
@@ -20,7 +20,7 @@ I needed to develop this app for a challenge, that was received in the Ignite co
 
 <h2 id="objective">🎯 Objective</h2>
 
-A simple app to you organize your objectives and check when you can done one or more. Separate your tasks in many of others simple tasks. 
+A simple app to organize your objectives and check when you can done one or more. Separate your tasks in many other simple tasks. 
 
 <h2 id="technologies">🛠 Technologies </h2>
 
@@ -34,7 +34,7 @@ A simple app to you organize your objectives and check when you can done one or 
 
 - Add new To-do's
 - Remove To-do's
-- Check or uncheck To-do's as concluded
+- Check or uncheck To-do's as done
 - Storage To-do's on localstorage
 - Get To-do's from localstorage when users get out and return to the page
 
